@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <script src="script.js"></script>
@@ -16,10 +16,53 @@
     <section id="landing">
         <nav>
             <div class="row nav__row">
-                <div class="nav__logo">
-                <!--  -->Nav Logo here<!--  -->
-                </div>
-                <!--  -->Enter Nav Links here<!--  -->
+                <a href="#" class="nav__logo link__hover-effect--purple">
+                        <img src="./assets/logo.2c489fc453a1783cbadacf914efa3df6.svg" class="nav__logo--img" alt="logo">
+                        <h1>Treact</h1>
+                </a>
+                    <ul class="nav__link--list">
+                      <li class="nav__link">
+                        <a href="#about" class="
+                          nav__link--anchor 
+                          link__hover-effect 
+                          link__hover-effect--purple
+                          ">About</a>
+                     </li>
+                     <li class="nav__link">
+                         <a href="#blog" class="
+                          nav__link--anchor 
+                         link__hover-effect 
+                         link__hover-effect--purple
+                          ">Blog</a>
+                      </li>
+                     <li class="nav__link">
+                         <a href="#pricing" class="
+                          nav__link--anchor 
+                         link__hover-effect 
+                         link__hover-effect--purple
+                          ">Pricing</a>
+                      </li>
+                     <li class="nav__link">
+                         <a href="#contact" class="
+                          nav__link--anchor 
+                         link__hover-effect 
+                         link__hover-effect--purple
+                          ">Contact Us</a>
+                      </li>
+                     <li class="nav__link">
+                         <a href="#login" class="
+                          nav__link--anchor nav__link--styled
+                         link__hover-effect 
+                         link__hover-effect--purple
+                          ">Login</a>
+                      </li>
+                      <li class="nav__link">
+                         <a href="#" class="
+                         nav__link--anchor 
+                         nav__link--anchor-primary
+                          ">Sign Up</a>
+                      </li>
+                    </ul>
                 <button class="btn__menu" onclick="openMenu()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -49,11 +92,20 @@
                 <a class="modal__link modal__link--primary">Sign Up</a>
             </div>
         </div>
+        <!-- Header -->
         <header>
             <div class="container">
                 <div class="row">
-                    <!--  -->Enter Header / About Us Section<!--  -->
-            </div>
+                    <div class="about__info row">
+            <div class="about__info--container">
+                <h1 class="about__info--title">Beautiful React Templates <span class="purple">for you.</span></h1>
+                <p class="about__info--para">
+                    Our templates are easy to setup, understand and customize. Fully modular components with a variety of pages and components.
+                    </p>
+                <figure class="about__picture--wrapper">
+                    <img src="./assets/design-illustration-2.6da6a00b20c07c4a9b65d1870679e1b8.svg" class="about__picture" alt="Illustration of a woman at personal computer in home office">
+                </figure>
+                </div>
         </header>
     </section>
     <main>

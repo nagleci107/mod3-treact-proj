@@ -8,6 +8,10 @@
     color: #243e63;
 }
 
+html {
+    line-height: 1.5;
+}
+
 body {
     max-width: 100vw;
     overflow-x: hidden;
@@ -15,7 +19,7 @@ body {
 
 .row {
     width: 100%;
-    max-width: 1280px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -41,6 +45,37 @@ main {
     margin-bottom: 96px;
 }
 
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.link__hover-effect {
+    position: relative;
+}
+
+.link__hover-effect::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    bottom: -3px;
+    right: 0;
+    transition: all 300ms ease;
+}
+
+.link__hover-effect--purple:hover {
+    color: rgb(100, 21, 255);
+}
+
+.link__hover-effect--white:hover {
+    color: white;
+}
+
+
 
 /* 
 
@@ -51,6 +86,8 @@ NAVBAR ↓
 
 nav {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-top: 32px;
 }
 
@@ -66,6 +103,31 @@ nav {
     padding-bottom: 4px;
 }
 
+.nav__logo--img {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+}
+
+.nav__logo h1 {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.nav__link--list {
+    display: flex;
+}
+
+.nav__link {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 24px;
+    padding: 0 0 4px;
+}
+
+.nav__link--styled {
+    margin: 0 24px 0 48px;
+}
 
 .btn__menu {
     display: none;
