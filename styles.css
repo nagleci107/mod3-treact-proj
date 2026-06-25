@@ -67,19 +67,12 @@ li {
     width: 0;
 }
 
-.link__hover-effect--purple:hover {
-    color: rgb(100, 21, 255);
-}
-.link__hover-effect--purple::after {
-    background-color: rgb(100, 21, 255);
-}
-
-.link__hover-effect--white::after {
-    background-color: white;
-}
-
 .link__hover-effect:hover::after {
     width: 100%;
+}
+
+.no-cursor {
+    cursor: not-allowed;
 }
 
 /* 
@@ -144,8 +137,16 @@ nav {
     color: white;
     border-radius: 20px;
     padding: 12px 32px;
+    margin: 0;
     transition: all 300ms ease;
 
+}
+
+.link__hover-effect--purple:hover {
+    color: rgb(100, 21, 255);
+}
+.link__hover-effect--purple::after {
+    background-color: rgb(100, 21, 255);
 }
 
 .nav__link--anchor-primary:hover {
@@ -465,6 +466,10 @@ footer {
     margin-bottom: -32px;
     position: relative;
     overflow: hidden;
+}
+
+.link__hover-effect--white::after {
+    background-color: white;
 }
 
 
