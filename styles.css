@@ -223,11 +223,11 @@ nav {
 }
 
 
-/* 
+/**********************
 
-HEADER / ABOUT US ↓
+* HEADER / ABOUT US ↓ *
 
-*/
+**********************/
 
 header .row {
     display: flex;
@@ -325,7 +325,7 @@ input:not(:placeholder-shown) {
     position: relative;
     bottom: 0;
     flex-direction: column;
-    opacity: 0.4;
+    opacity: 0.5;
 }
 
 .about__customers--txt {
@@ -336,7 +336,8 @@ input:not(:placeholder-shown) {
 }
 
 .about__customers--img {
-    flex: 1;
+    padding-right: 8rem;
+
 }
 
 .about__img--col2 {
@@ -355,6 +356,13 @@ input:not(:placeholder-shown) {
 .about__picture--img {
     max-width: 100%;
 }
+
+/***********************
+
+*         MAIN         *
+
+***********************/
+
 /* 
 
 FEATURES ↓
