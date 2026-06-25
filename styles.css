@@ -33,6 +33,22 @@ body {
     padding: 96px 0;
 }
 
+.section__title {
+    font-size: 16px;
+    letter-spacing: 0.1rem;
+}
+
+.section__heading {
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.section__para {
+    font-size: 18px;
+    color: #7c8ba1;
+    font-weight: 500;
+}
+
 .purple {
     color: #6415ff;
 }
@@ -238,7 +254,6 @@ header .row {
 
 .about__info--twocol {
     display: flex;
-
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -378,8 +393,59 @@ FEATURES ↓
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 3vh 0;
 }
 
+#features .section__heading{
+    text-align: center;
+    margin: 12px 0;
+}
+
+.section__para--center {
+    text-align: center;
+    width: calc(100%/1.8);
+}
+
+.feature__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 24px 0;
+}
+.feature {
+    padding: 32px 8px;
+    margin: 0 auto;
+    width: calc(100% / 3);
+    display: flex;
+    flex-direction: row;
+}
+
+.feature__icon--wrapper {
+    border: 1px solid rgb(160, 170, 192, 0.3);
+    border-radius: 50%;
+    max-height: 66px;
+    padding: 20px;
+}
+.feature__icon--img {
+    width: 24px;
+    height: 24x;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.feature__txt--wrapper {
+    margin: 8px 0 0 16px;
+}
+.feature__name {
+    font-size: 24px;
+}
+.feature__para{
+    max-width: 200px;
+    margin-top: 16px;
+    color: #7c8ba1;
+    font-weight: 500;
+    line-height: 1.75;
+    justify-content: left;
+}
 
 /* 
 
@@ -393,6 +459,7 @@ QUALITY WORK ↓
     justify-content: space-between;
     align-items: center;
 }
+
 
 
 /* 
