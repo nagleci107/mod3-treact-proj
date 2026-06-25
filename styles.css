@@ -280,64 +280,59 @@ nav {
 }
 
 
-/**********************
+/******************************
 
-* HEADER / ABOUT US ↓ *
+* HEADER / LANDING ABOUT US ↓ *
 
-**********************/
+******************************/
 
 header .row {
     display: flex;
+    justify-content: center;
     width: 100%;
     max-width: 1280px;
     margin: 0 auto;
 }
 
-.about__info--twocol {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
 /* column 1 / left */
-.about__info--container-col1 {
+#landing .section__container {
     display: flex;
     flex-direction: column;
-    width: 40%;
-    min-width: 448px;
+    width: 41.6667%;
 }
 
-.about__info--title {
+.landing__info--title {
     font-size: 48px;
     line-height: 1.25;
     color: black;
 }
 
-.about__info--para {
+#landing .section__para {
     display: flex;
-    margin: 32px 0;
+    color: #243e63;
+    margin: 2rem 0;
     font-size: 18px;
 }
 
-.about__email--wrapper{
+.landing__email--wrapper{
     position: relative;
     display: flex;
     max-height: 80px;
-    width: 90%;
     border: 2px solid rgb(229, 231, 235);
     border-radius: 99px;
+    width: 85%;
     align-items: center;
     transition: all 300ms ease;
+    margin: 0;
     margin-bottom: 10vh;
 }
 
-.about__email--wrapper:hover {
+.landing__email--wrapper:hover {
     border: 2px solid rgb(160, 170, 192);
 }
 
 
-input {
+#landing input {
     font-weight: 500;
     font-size: 16px;
     opacity: 0.5;
@@ -348,7 +343,7 @@ input {
     flex: 1;
 }
 
-.about__email--wrapper:focus-within{
+.landing__email--wrapper:focus-within{
     border-color: rgb(80, 17, 204);
 }
 
@@ -363,35 +358,29 @@ input:not(:placeholder-shown) {
     right: 0;
 }
 
-.about__customers {
+.landing__customers {
     display: flex;
-    position: relative;
-    bottom: 0;
     flex-direction: column;
+    margin-top: 5rem;
+    width: 100%;
     opacity: 0.5;
 }
 
-.about__customers--txt {
+.landing__customers--txt {
     display: flex;
     font-weight: 800;
     font-size: 12px;
-    margin: 16px 0;
 }
 
-.about__customers--img {
+.landing__customers--img {
     padding-right: 8rem;
+    margin-top: ;
 
 }
 
-.about__img--col2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#landing .section__img--wrapper {
     width: 60%;
-}
-
-#about .section__img--wrapper {
-    width: 50%;
+    flex: 1;
 }
 
 /***********************
@@ -754,7 +743,7 @@ MOBILE RESPONSIVENESS ↓
         margin-bottom: 80px;
     }
 
-    .about__info--twocol {
+    .landing__info--twocol {
     flex-direction: column;
     }
 }
