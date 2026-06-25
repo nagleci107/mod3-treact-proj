@@ -51,6 +51,11 @@ body {
     font-weight: 500;
 }
 
+.section__img--wrapper {
+    display: flex;
+    align-items: center;
+}
+
 .section__img {
     width: 100%;
     height: max-content;
@@ -385,14 +390,8 @@ input:not(:placeholder-shown) {
     width: 60%;
 }
 
-.about__picture--wrapper {
-    min-width: 512px;
-    width: 100%;
-    max-width: 48vw;
-}
-
-.about__picture--img {
-    max-width: 100%;
+#about .section__img--wrapper {
+    width: 50%;
 }
 
 /***********************
@@ -501,8 +500,12 @@ QUALITY WORK ↓
 }
 
 #quality .section__img--wrapper {
-    display: flex;
     width: 100%;
+}
+
+#quality .section__img {
+    border: 1px solid rgba(160, 170, 192, 0.3);
+    border-radius: 5px;
 }
 
 /* 
@@ -519,8 +522,6 @@ STEPS ↓
 }
 
 #steps .section__img--wrapper {
-    display: flex;
-    align-items: center;
     width: 50%;
 }
 
