@@ -605,8 +605,14 @@ VALUES ↓
     border-radius: 50%;
     padding: 8px;
 }
+.fa-dollar-sign path {
+    color: darkgreen;
+}
 .value__i--wrapper--green {
     background-color: #9AE684;
+}
+.fa-suitcase path {
+    color: darkred;
 }
 .value__i--wrapper--red {
     background-color: rgb(236, 159, 159);
@@ -797,7 +803,97 @@ TESTIMONIALS ↓
 
 #testimonials .row {
     display: flex;
+    flex-direction: row;
+    width: 100%;
 }
+#testimonials .section__img--wrapper {
+    display: flex;
+    width: 50%;
+    float: left;
+}
+#testimonials .section__container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 4rem;
+}
+
+
+.review__container {
+    margin-top: 2.5rem;
+    gap: 20px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+}
+.review {
+    display: flex;
+    flex: 0 0 300px;
+    flex-direction: column;
+}
+.fa-star path {
+    font-family: FontAwesome;
+    color: rgb(246, 173, 85);
+}
+.review__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+.review__para {
+    margin-top: 1rem;
+}
+
+.review__info-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+.review__client--container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    flex: 1;
+}
+
+.review__img--mask {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.review__img {
+    width: 100%;
+}
+
+.review__client--id {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: 1.5rem;
+}
+.review__client--name {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+.review__client--title {
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.7;
+}
+
+.review button,
+.review__btn path {
+    margin: 0 0.75rem;
+    width: 50px;
+    background-color: rgb(237, 242, 247);
+    color: #6415ff;
+}
+
 
 
 /* 
