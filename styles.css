@@ -47,9 +47,11 @@ body {
 }
 
 .section__para {
-    font-size: 18px;
     color: #7c8ba1;
     font-weight: 500;
+    max-width: 36rem;
+    line-height: 1.625;
+    margin: 0 auto;
 }
 
 .center {
@@ -296,21 +298,20 @@ nav {
 
 header .row {
     display: flex;
-    justify-content: center;
-    width: 100%;
-    max-width: 1280px;
     margin: 0 auto;
 }
 
 /* column 1 / left */
 #landing .section__container {
-    display: flex;
-    flex-direction: column;
+    position: relative;
     width: 41.6667%;
+    max-width: none;
+    text-align: left;
+    margin: 0 auto;
 }
 
 .landing__info--title {
-    font-size: 48px;
+    font-size: 2.25rem;
     line-height: 1.25;
     color: black;
 }
@@ -319,7 +320,7 @@ header .row {
     display: flex;
     color: #243e63;
     margin: 2rem 0;
-    font-size: 18px;
+    font-size: 1rem;
 }
 
 .landing__email--wrapper{
@@ -334,12 +335,9 @@ header .row {
     margin: 0;
     margin-bottom: 10vh;
 }
-
 .landing__email--wrapper:hover {
     border: 2px solid rgb(160, 170, 192);
 }
-
-
 #landing input {
     font-weight: 500;
     font-size: 16px;
@@ -350,17 +348,14 @@ header .row {
     padding: 20px 192px 20px 32px;
     flex: 1;
 }
-
 .landing__email--wrapper:focus-within{
     border-color: rgb(80, 17, 204);
 }
-
 input:focus,
 input:not(:placeholder-shown) {
     opacity: 1;
     color: #1a202c;
 }
-
 #landing .btn__primary {
     position: absolute;
     right: 0;
@@ -373,13 +368,11 @@ input:not(:placeholder-shown) {
     width: 100%;
     opacity: 0.5;
 }
-
 .landing__customers--txt {
     display: flex;
     font-weight: 800;
     font-size: 12px;
 }
-
 .landing__customers--img {
     padding-right: 8rem;
     margin-top: 1rem;
@@ -387,7 +380,9 @@ input:not(:placeholder-shown) {
 }
 
 #landing .section__img--wrapper {
-    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     flex: 1;
 }
 
@@ -410,18 +405,21 @@ FEATURES ↓
 
 #features .row__narrow {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3vh 0;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    max-width: 1024px;
+    flex-flow: column wrap;
+    padding: 6rem 0;
 }
-
-#features .section__heading{
+#features .section__title,
+#features .section__heading,
+#features .section__para {
     text-align: center;
-
 }
-
-#features .center {
-    width: calc(100%/1.8);
+#features .section__para {
+    width: 100%;
+    margin-top: 1rem;
 }
 
 .feature__wrapper {
@@ -478,18 +476,28 @@ QUALITY WORK ↓
     align-items: center;
 }
 
-#quality .section__container {
+
+
+#quality .section__container--wrapper {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: 50%;
+    margin-right: 4rem;
+    order: -99;
 }
-
+#quality .section__heading {
+    font-size: 3rem;
+}
 #quality .section__para {
     padding-right: 1.5rem;
 }
 
 #quality .section__img--wrapper {
-    width: 100%;
+    position: relative;
+    display: flex;
+    width: 50%;
+    margin: 0;
+    flex-shrink: 0;
 }
 
 #quality .section__img {
@@ -666,28 +674,27 @@ PRICING ↓
 #pricing .section__para {
     margin: 0 auto;
     margin-top: 1rem;
-    width: calc(100%/2.2);
+    width: 100%;
 
 }
 
 .plans__container {
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin: 0 auto;
-    flex-shrink: 0;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+    width: 100%;
 }
 
 .plan {
     display: flex;
-    flex-shrink: 0;
     flex-direction: column;
     position: relative;
     align-items: stretch;
     margin-top: 4rem;
     margin-right: 2rem;
     padding: 2rem 0.5rem 2rem;
-    width: calc(100% / 3.3);
+    width: 100%;
     max-width: 24rem;
     border-radius: 0.5rem;
     border: 1px solid rgba(160, 170, 192, 0.2);
@@ -806,7 +813,6 @@ TESTIMONIALS ↓
 #testimonials .row {
     display: flex;
     flex-direction: row;
-    width: 100%;
 }
 #testimonials .section__img--wrapper {
     display: flex;
@@ -1086,7 +1092,12 @@ MOBILE RESPONSIVENESS ↓
 }
 
 @media (max-width: 1024px) {
-
+    .nav__row {
+        justify-content: space-between;
+    }
+    .nav__link--list {
+        display: none;
+    }
     .btn__menu {
         display: block;
     }
@@ -1094,8 +1105,15 @@ MOBILE RESPONSIVENESS ↓
         flex-direction: column;
         align-items: center;
     }
+    #landing .section__container {
+        width: 70%;
+        margin: 0 auto;
+    }
     footer {
         padding: 80px 32px;
+    }
+   .section__para {
+    font-size: 1.125rem;
     }
 }
 
