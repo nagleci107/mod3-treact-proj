@@ -1155,11 +1155,6 @@ MOBILE RESPONSIVENESS ↓
         width: calc(100% / 2);
     }
 
-    .values__container {
-        margin: 0;
-        flex-direction: column;
-    }
-
     #pricing .section__heading {
         font-size: 3rem;
     }
@@ -1260,15 +1255,7 @@ MOBILE RESPONSIVENESS ↓
         margin-left: 2rem;
         margin-right: 2rem;
     }
-    #quality .section__heading,
-    #values .section__heading {
-        font-size: 1.875rem;
-    }
-    #quality .section__para,
-    #values .section__para,
-    #pricing .section__para {
-        font-size: 0.875rem;
-    }
+
     #quality .section__para {
         padding-right: 0;
     }
@@ -1311,15 +1298,15 @@ MOBILE RESPONSIVENESS ↓
         padding: 0;
         margin: 0 auto;
     }
-    .values__container,
-    .value,
-    .value__header--wrapper {
-        align-items: center;
+    .values__container {
+        justify-content: center;
         margin: 0 auto;
     }
-    .value__header--wrapper {
-        justify-content: center;
+    .value p {
+        text-align: left;
     }
+
+
 
     #pricing .row {
         margin-top: 40px;
@@ -1384,12 +1371,7 @@ MOBILE RESPONSIVENESS ↓
         background-color: rgb(245, 101, 101);
     }
 
-    .footer--btmrow {
-        flex-direction: column;
-    }
-    .footer--socials {
-        margin: 1rem auto;
-    }
+
     
 }
 
@@ -1407,5 +1389,34 @@ MOBILE RESPONSIVENESS ↓
 
     .landing__info--twocol {
     flex-direction: column;
+    }
+    #quality .section__heading,
+    #values .section__heading {
+        font-size: 1.875rem;
+    }
+    #quality .section__para,
+    #values .section__para,
+    #pricing .section__para {
+        font-size: 0.875rem;
+    }
+    .values__container,
+    .value,
+    .value__header--wrapper {
+        align-items: center;
+        margin: 0 auto;
+    }
+    .values__container {
+        margin: 0;
+        flex-direction: column;
+    }
+    .value__header--wrapper {
+        justify-content: center;
+    }
+
+    .footer--btmrow {
+        flex-direction: column;
+    }
+    .footer--socials {
+        margin: 1rem auto;
     }
 }
