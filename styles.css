@@ -456,7 +456,11 @@ FEATURES ↓
     margin: 8px 0 0 16px;
 }
 .feature__name {
-    font-size: 24px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.025rem;
+    margin-top: 1rem;
 }
 .feature__para{
     max-width: 24rem;
@@ -635,9 +639,6 @@ VALUES ↓
 }
 
 .value__header--text {
-    display: flex;
-    align-items: center;
-    width: 100%;
     font-size: 1.25rem;
     font-weight: 700;
     margin-left: 0.75rem;
@@ -898,6 +899,10 @@ TESTIMONIALS ↓
     opacity: 0.7;
 }
 
+.review__btn--container {
+    display: flex;
+    flex-direction: row;
+}
 .review button,
 .review__btn path {
     margin: 0 0.75rem;
@@ -1218,18 +1223,174 @@ MOBILE RESPONSIVENESS ↓
 }
 
 @media(max-width: 768px) {
+    
+    .feature {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .feature__icon--wrapper {
+        max-width: 66px;
+    }
+    .feature__icon--wrapper,
+    .feature__txt--wrapper,
+    .feature__para {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        text-align: center;
+    }
     #quality .row,
     #values .row {
         flex-direction: column-reverse;
     }
+    #quality .section__img--wrapper,
+    #steps .section__img--wrapper,
+    #values .section__img--wrapper,
+    #testimonials .section__img--wrapper {
+        width: 100%;
+    }
+    #quality .section__container--wrapper {
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 4rem;
+        align-items: center;
+        text-align: center;
+    }
+    #quality .section__container {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+    #quality .section__heading,
+    #values .section__heading {
+        font-size: 1.875rem;
+    }
+    #quality .section__para,
+    #values .section__para,
+    #pricing .section__para {
+        font-size: 0.875rem;
+    }
+    #quality .section__para {
+        padding-right: 0;
+    }
+    #quality .section__btn,
+    #values .section__btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     #steps .row,
     #testimonials .row {
         flex-direction: column;
         align-items: center;
     }
+    #steps .section__container,
+    .step {
+        margin: 0 auto;
+        align-items: center;
+        text-align: center;
+    }
+    .step__container {
+        flex-direction: column;
+    }
+    .step__number {
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+        font-size: 2.25rem;
+    }
+    .step__desc {
+        max-width: 20rem;
+    }
+
+    #values .section__container--wrapper {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    #values .section__container {
+        padding: 0;
+        margin: 0 auto;
+    }
+    .values__container,
+    .value,
+    .value__header--wrapper {
+        align-items: center;
+        margin: 0 auto;
+    }
+    .value__header--wrapper {
+        justify-content: center;
+    }
+
     #pricing .row {
         margin-top: 40px;
     }
+    #pricing .section__heading {
+        font-size: 2.25rem;
+    }
+    .plan__price {
+        font-size: 2.25rem;
+    }
+
+    #testimonials .row {
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+    #testimonials .section__container {
+        width: 90%;
+    }
+    #testimonials .section__heading {
+        font-size: 1.875rem;
+    }
+    #testimonials .section__para {
+        font-size: 0.875rem;
+    }
+    .review__para {
+        margin-bottom: 2rem;
+    }
+    .review__info-buttons,
+    .review__client--container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .review__client--id {
+        margin-left: 0;
+    }
+    .review__img--mask,
+    .review__img {
+        height: 4rem;
+        width: 4rem;
+    }
+    .review__btn--container {
+        margin-top: 2rem;
+    }
+
+    .getstarted__text {
+        font-size: 1.5rem;
+        width: 80%;
+    }
+    .getstarted__btn--container {
+        display: flex;
+        flex-direction: column;
+    }
+    #start .section__btn {
+        font-size: 0.875rem;
+        max-width: 20rem;
+        padding: 0.875rem 1rem;
+        margin: 0.5rem auto;
+    }
+    .btn__getstarted {
+        background-color: rgb(245, 101, 101);
+    }
+
+    .footer--btmrow {
+        flex-direction: column;
+    }
+    .footer--socials {
+        margin: 1rem auto;
+    }
+    
 }
 
 @media(max-width: 640px) {
