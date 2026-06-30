@@ -40,7 +40,7 @@ body {
 
 
 .section__heading {
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 900;
     line-height: 1.25;
     margin: 12px 0;
@@ -364,19 +364,21 @@ input:not(:placeholder-shown) {
 .landing__customers {
     display: flex;
     flex-direction: column;
-    margin-top: 5rem;
+    margin: 0 auto;
+    margin-top: 3rem;
     width: 100%;
     opacity: 0.5;
 }
-.landing__customers--txt {
+.landing__customers p {
     display: flex;
-    font-weight: 800;
-    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 700;
+    font-size: 0.875rem;
 }
 .landing__customers--img {
-    padding-right: 8rem;
+    width: 100%;
     margin-top: 1rem;
-
 }
 
 #landing .section__img--wrapper {
@@ -425,14 +427,15 @@ FEATURES ↓
 .feature__wrapper {
     display: flex;
     flex-wrap: wrap;
-    margin: 24px 0;
+    margin: 24px auto;
 }
 .feature {
+    display: flex;
+    flex-direction: row;
     padding: 32px 8px;
     margin: 0 auto;
     width: calc(100% / 3);
-    display: flex;
-    flex-direction: row;
+    max-width: 24rem;
 }
 
 .feature__icon--wrapper {
@@ -449,13 +452,14 @@ FEATURES ↓
     justify-content: center;
 }
 .feature__txt--wrapper {
+    width: 100%;
     margin: 8px 0 0 16px;
 }
 .feature__name {
     font-size: 24px;
 }
 .feature__para{
-    max-width: 200px;
+    max-width: 24rem;
     margin-top: 16px;
     color: #7c8ba1;
     font-weight: 500;
@@ -485,9 +489,7 @@ QUALITY WORK ↓
     margin-right: 4rem;
     order: -99;
 }
-#quality .section__heading {
-    font-size: 3rem;
-}
+
 #quality .section__para {
     padding-right: 1.5rem;
 }
@@ -520,15 +522,18 @@ STEPS ↓
 
 #steps .section__img--wrapper {
     width: 50%;
+    flex-shrink: 0;
 }
 
 #steps .section__container--wrapper {
     padding: 2rem 0;
+
 }
 #steps .section__container {
     display: flex;
     flex-direction: column;
     margin-left: 4rem;
+    text-align: left;
 }
 
 .step__container {
@@ -536,12 +541,12 @@ STEPS ↓
     display: flex;
     flex-direction: row;
     margin-top: 32px;
-    width: 24rem;
+    max-width: 24rem;
 }
 
 .step__number {
     display: flex;
-    font-size: 36px;
+    font-size: 1.25rem;
     font-weight: 600;
     color: #CBD5E0;
     padding-bottom: 1rem;
@@ -596,7 +601,8 @@ VALUES ↓
 .value {
     padding-top: 2rem;
     padding-right: 2rem;
-    width: 50%;
+    max-width: 20rem;
+    width: 100%;
 }
 .value:last-child{
     padding-right: 0;
@@ -637,7 +643,8 @@ VALUES ↓
     margin-left: 0.75rem;
 }
 
-.value__desc {
+.value p {
+    width: 100%;
     font-weight: 400;
     opacity: 0.8;
     margin-top: 1rem;
@@ -681,7 +688,6 @@ PRICING ↓
 .plans__container {
     position: relative;
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: space-between;
     width: 100%;
 }
@@ -690,7 +696,6 @@ PRICING ↓
     display: flex;
     flex-direction: column;
     position: relative;
-    align-items: stretch;
     margin-top: 4rem;
     margin-right: 2rem;
     padding: 2rem 0.5rem 2rem;
@@ -817,7 +822,6 @@ TESTIMONIALS ↓
 #testimonials .section__img--wrapper {
     display: flex;
     width: 50%;
-    float: left;
 }
 #testimonials .section__container {
     display: flex;
@@ -1092,6 +1096,13 @@ MOBILE RESPONSIVENESS ↓
 }
 
 @media (max-width: 1024px) {
+    
+    .section__heading {
+        font-size: 2.25rem;
+    }
+    .section__para {
+        font-size: 1rem;
+    }
     .nav__row {
         justify-content: space-between;
     }
@@ -1105,15 +1116,104 @@ MOBILE RESPONSIVENESS ↓
         flex-direction: column;
         align-items: center;
     }
+
+    .landing__info--title {
+        font-size: 1.875rem;
+    }
+    .landing__info--title,
+    #landing .section__para,
+    .landing__email--wrapper,
+    .landing__customers,
+    .landing__customers p,
+    .landing__customers--img {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
     #landing .section__container {
-        width: 70%;
+        max-width: 32rem;
+        width: 100%;
         margin: 0 auto;
+    }
+    #landing .section__img--wrapper {
+        margin-top: 3rem;
+        max-width: 32rem;
+    }
+
+    #features .section__para {
+        margin-top: 1rem;
+    }
+    .feature__wrapper {
+        margin-top: 2.5rem;
+    }
+    .feature {
+        width: calc(100% / 2);
+    }
+
+    .values__container {
+        margin: 0;
+        flex-direction: column;
+    }
+
+    #pricing .section__heading {
+        font-size: 3rem;
+    }
+    .plans__container {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .plan {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .plan--btn {
+        width: 70%;
+    }
+
+    #testimonials .section__img--wrapper {
+        width: 41.667%;
+    }
+    #testimonials .section__container {
+        width: 52%;
+        padding-left: 2rem;
+    }
+    .review__title {
+        margin-top: 1rem;
+    }
+    .review__para {
+        margin-bottom: 2.5rem;
+    }
+    .review__img {
+        height: 5rem;
+        width: 5rem;
+    }
+    .review__client--name {
+        font-size: 1.25rem;
+    }
+
+    .getstarted__contents--row {
+        flex-direction: column;
+        width: 100%;
+    }
+    .getstarted__text {
+        font-size: 1.875rem;
+        text-align: center;
+    }
+    .getstarted__btn--container {
+        margin-top: 1.5rem;
+        width: 100%;
+        max-width: 32rem;
+        justify-content: center;
+    }
+    #start .section__btn {
+        width: 10rem;
+        padding: 1.5rem 2rem;
+    }
+    .btn__getstarted {
+        background-color: rgb(229, 62, 62);
     }
     footer {
         padding: 80px 32px;
-    }
-   .section__para {
-    font-size: 1.125rem;
     }
 }
 
